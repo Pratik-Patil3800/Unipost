@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="/home.css">
+
+<nav class="navbar">
+    <div ><a href="/home" id="h">Home</a></div>
+    <div ><a href="/posts" >Schedule Post</a></div>
+    <div ><a href="/setting">Settings</a></div>
+    <div><a href="/users/logout"><img src="icons8-logout-25.png" alt=""></a></div>
+</nav>
+
+<form action="/home" method="POST" enctype="multipart/form-data">
+    <div class="wraper">
+        <div class="upload-wraper">
+            <div class="upload">
+                <input type="file" id="file" accept="image/*" hidden name="postimg">
+                <div class="img_display">
+                    <h3>upload image</h3>
+                </div>
+                <button class="btn" id="img_in"  type="button">Select Image</button>
+            </div>
+            <textarea name="postcomment" id="comment" cols="30" rows="10" placeholder="Write a caption" class="upload"></textarea>
+        </div>
+        <div class="choice">
+            <h3>Select social media handel for post</h3>
+            <div class="media">
+                <div class="media_select">
+                    <input type="checkbox" name="instaCheckbox" >
+                    <img src="/insta1.webp" alt="">
+                </div>
+                <div class="media_select">
+                    <input type="checkbox" name="fbCheckbox">
+                    <img src="/facebookimg.webp" alt="" >
+                </div>
+                <div class="media_select">
+                    <input type="checkbox" name="twiCheckbox">
+                    <img src="/twitter.svg" alt="">
+                </div>
+            </div>
+            <div class="make_post"><button class="btn" >Send Post</button></div>
+        </div>
+    </div>
+</form>
+
+<script src="/post_input.js"></script>
+    

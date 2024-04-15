@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="/style.css">
+<div class="wraper">
+    
+    <form action="/users/register" class="login_input" method="POST">
+        <h1 >Reset Password</h1>
+        <%- include('message.ejs') %>
+        <div class="inputbox">
+            <input type="text" placeholder="enter your name" name="name"  value="<%= typeof name != 'undefined' ? name : '' %>">
+          
+        </div>
+        <div class="inputbox">
+            <input type="email" placeholder="enter your email" name="email" value="<%= typeof email != 'undefined' ? email : '' %>">
+            
+        </div>
+        <div class="inputbox">
+            <input type="password" placeholder="enter your pasword" name="password"  value="<%= typeof password != 'undefined' ? password : '' %>">
+            
+        </div>
+        <div class="inputbox">
+            <input type="password" placeholder="conform your pasword" name="password2" value="<%= typeof password2 != 'undefined' ? password2 : '' %>">
+            
+        </div>
+        
+        <button type="submit" value="register">Register</button>
+        
+        
+        <div class="forgot_registor">
+            <div>
+                Already have an account?<a href="/users/login">login</a>
+            </div>
+            
+            
+        </div>
+    </form>
+</div>

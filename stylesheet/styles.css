@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+body::-webkit-scrollbar {
+  width: 0;
+}
+.container {
+  position: relative;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input[type="file"],
+  input[type="text"],
+  textarea,
+  input[type="date"],
+  .checkbox-container {
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .checkboxes {
+    display: flex;
+    align-items: center;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #228d26;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Scheduled posts list styles */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  
+
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+  
+ 
+  .delete-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .delete-button:hover {
+    background-color: #c82333;
+  }
+
+  #scheduled-posts-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  #scheduled-posts-list li div {
+    flex-grow: 1; 
+  }
+  #scheduled-posts-list li img {
+    max-width: 200px;
+    max-height: 200px;
+    margin-left: 20px; 
+  }
+  .navbar {
+    display: flex;
+    justify-content: end;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+  }
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  .navbar img {
+    
+    margin-top: 0px;
+  }
+  #p {
+    color: burlywood;
+  }
+
+  .active{
+    display: none;
+  }
+
+  #closebtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    font-size: 26px;  
+  }
+
+  #schedule-post-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }

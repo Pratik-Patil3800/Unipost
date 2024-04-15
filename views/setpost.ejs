@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="styles.css">
+<nav class="navbar">
+  <div><a href="/home">Home</a></div>
+  <div ><a href="/posts" id="p">Schedule Post</a></div>
+  <div><a href="/setting">Settings</a></div>
+  <div><a href="/users/logout"><img src="icons8-logout-25.png" alt=""></a></div>
+</nav>
+<button id="schedule-post-button" type="button">Schedule Post</button>
+
+<div class="container active" id="form">
+  <button type="button" id="closebtn">✖</button>
+    <h1>Create a New Post</h1>
+    <form action="/posts" method="post" enctype="multipart/form-data">
+      <label for="postimg">Select Image:</label>
+      <input type="file" id="postimg" name="postimg" accept="image/*" required>
+
+      <label for="postcomment">Enter Content:</label>
+      <textarea id="postcomment" name="postcomment" rows="4" required></textarea>
+
+      <label for="scheduledDate">Select Date:</label>
+      <input type="date" id="scheduledDate" name="scheduledDate" required>
+
+      <div class="checkboxes">
+        <input type="checkbox" id="fbCheckbox" name="fbCheckbox">
+        <label for="fbCheckbox">Facebook</label>
+
+        <input type="checkbox" id="instaCheckbox" name="instaCheckbox">
+        <label for="instaCheckbox">Instagram</label>
+
+        <input type="checkbox" id="twiCheckbox" name="twiCheckbox">
+        <label for="twiCheckbox">Twitter</label>
+      </div>
+
+      <button type="submit">Create Post</button>
+    </form>
+
+  </div>
+
+  <div class="container">
+    <% if (scheduledPosts.length === 0) { %>
+      <h1>No scheduled posts</h1>
+    <% } else { %>
+      <h1>Scheduled Posts</h1>
+      <ul id="scheduled-posts-list">
+        <% scheduledPosts.forEach(post => { %>
+          <li>
+            <div>
+              <h2><%= post.content %></h2>
+              <p>Scheduled Date: <%= ('0' + post.scheduledTime.getDate()).slice(-2) %>/<%= ('0' + (post.scheduledTime.getMonth() + 1)).slice(-2) %>/<%= post.scheduledTime.getFullYear() %></p>
+              <button class="delete-button" data-post-id="<%= post._id %>" type="button">Delete</button>
+            </div>
+            <img src="https://res.cloudinary.com/dgpbmuvow/image/upload/<%= post.imgpath %>" alt="Post Image">
+          </li>
+        <% }); %>
+      </ul>
+    <% } %>
+  </div>
+  
+  <script src="/deletepost.js"></script>
+
+  
+  
+  

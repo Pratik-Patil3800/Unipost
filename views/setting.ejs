@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="/settingstylesheet.css">
+<nav class="navbar">
+    <div><a href="/home">Home</a></div>
+    <div><a href="/posts">Schedule Post</a></div>
+    <div ><a href="/setting" id="s">Settings</a></div>
+    <div><a href="/users/logout"><img src="icons8-logout-25.png" alt=""></a></div>
+</nav>
+<form action="/setting" method="post" >
+  <div class="container">
+    <nav class="settings-navbar">
+        <div><a id="password">Manage Password</a></div>
+        <div><a  id="socialmedia">Add Social Media Account</a></div>
+      </nav>
+    <div class="form-section">
+      <div class="card media dactive" >
+        <h2>Instagram</h2>
+        <div class="input-section">
+          <label for="insta-id">Instagram ID</label>
+          <input type="text" id="insta-id" name="instaid" >
+        </div>
+        <div class="input-section">
+          <label for="insta-pass">Instagram Password</label>
+          <input type="password" id="insta-pass" name="instapass" >
+        </div>
+      </div>
+      <div class="card media dactive">
+        <h2>Twitter</h2>
+        <div class="input-section">
+          <label for="twitter-id">Twitter ID</label>
+          <input type="text" id="twitter-id" name="twiid" >
+        </div>
+        <div class="input-section">
+          <label for="twitter-pass">Twitter Password</label>
+          <input type="password" id="twitter-pass" name="twipass" >
+        </div>
+      </div>
+      <div class="card media dactive">
+        <h2>Facebook</h2>
+        <div class="input-section">
+          <label for="fb-id">Facebook ID</label>
+          <input type="text" id="fb-id" name="fbid" >
+        </div>
+        <div class="input-section">
+          <label for="fb-pass">Facebook Password</label>
+          <input type="password" id="fb-pass" name="fbpass" >
+        </div>
+      </div>
+      <div class="card pass" >
+        <h2>Reset Password</h2>
+        
+        <div class="input-section">
+          <label for="old-pass">Old Password</label>
+          <input type="password" id="old-pass" name="oldpass" value="<%= typeof oldpass != 'undefined' ? oldpass : '' %>" required>
+        </div>
+        <div class="input-section">
+          <label for="new-pass">New Password</label>
+          <input type="password" id="new-pass" name="newpass" value="<%= typeof newpass != 'undefined' ? newpass : '' %>" required>
+        </div>
+        <div class="input-section">
+          <label for="confirm-pass">Confirm Password</label>
+          <input type="password" id="confirm-pass" name="confirmpass" value="<%= typeof confirmpass != 'undefined' ? confirmpass : '' %>" required>
+        </div>
+        <%- include('settingmessage.ejs') %>
+      </div>
+      <button type="submit" class="save-button">Save</button>
+    </div>
+</div>
+</form>
+<script src="/settingselect.js"></script>

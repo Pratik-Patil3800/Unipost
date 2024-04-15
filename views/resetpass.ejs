@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/style.css">
+<div class="wraper">
+    
+    <form action="/users/resetpass" class="login_input" method="POST">
+        <h1 >Register</h1>
+        <%- include('message.ejs') %>
+        
+        <div class="inputbox">
+            <input type="text" placeholder="enter otp" name="otp" >
+            
+        </div>
+        <div class="inputbox">
+            <input type="password" placeholder="enter your pasword" name="password"  value="<%= typeof password != 'undefined' ? password : '' %>">
+            
+        </div>
+        <div class="inputbox">
+            <input type="password" placeholder="conform your pasword" name="password2" value="<%= typeof password2 != 'undefined' ? password2 : '' %>">
+            
+        </div>
+        
+        <button type="submit" value="register">Change Password</button>
+    </form>
+</div>
